@@ -5,6 +5,9 @@ VELOCITY_COLOR = GREEN
 POSITION_COLOR = BLUE
 CONST_COLOR = YELLOW
 
+Tex = TexMobject
+TexText = TextMobject
+
 class ExpGraph(GraphScene):
     CONFIG = {
         "x_axis_label": r"$t$",

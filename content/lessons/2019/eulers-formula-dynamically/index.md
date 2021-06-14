@@ -6,5 +6,91 @@ chapter: 5
 video: v0YEaeIClKY
 source: _2019/diffyq/part5
 credits:
-- Lesson by Grant Sanderson
+- Lesson by Vivek Verma
 ---
+
+One way to think about the function $e^t$ is to ask what properties it has. Probably the most important one, from some points of view the defining property, is that it’s a function which is equal to its own derivative. Together with the added condition that inputting $0$ returns $1$, it’s the only function with this property. 
+
+{{<figure image="images/1_equation.svg" width="544">}}
+{{</figure>}}
+
+You can illustrate what that means with a physical model: Think of $e^t$ as your position on a number line as a function of time. The condition $e^0 = 1$ means you start at $1$.  The equation above is saying that your velocity, the derivative of position, is always equal to your position. In other words, the farther away from 0 you are, the faster you move, with the very specific constraint that your velocity vector is perpetually identical to your position vector.
+
+{{<figure image="images/1_img.png" width="800">}}
+{{</figure>}}
+
+So even before knowing how to compute $e^t$ exactly, this ability to associate each position with the velocity you must have at that position paints a very strong intuitive picture of how the function must grow. You know you’ll be accelerating, at an accelerating rate, with an all-around feeling of things getting out of hand quickly.
+
+{{<figure image="images/ExpGraph.png" width="800">}}
+{{</figure>}}
+
+If we add a constant to this exponent, like $e^{2t}$, the chain rule tells us the derivative of our function is now $2$ times the function itself.
+
+{{<figure image="images/2_equation.svg" width="544">}}
+{{</figure>}}
+
+So at every point on the number line, rather than attaching a vector corresponding to the number itself, first double the magnitude, then attach it. Moving so that your position is always $e^{2t}$ is the same thing as moving in such a way that your velocity is always twice your position. The implication of that $2$ is that our runaway growth feels all the more out of control.
+
+{{<figure image="images/2_img.png" width="800">}}
+{{</figure>}}
+
+If that constant was negative, say -0.5, then your velocity vector is always -0.5 times your position vector, meaning you flip it around 180-degrees, and scale its length by a half.
+
+{{<figure image="images/3_equation.svg" width="544">}}
+{{</figure>}}
+
+Moving in such a way that your velocity always matches this flipped and squished copy of the position vector, you’d go the other direction, slowing down in exponential decay towards 0.
+
+{{<figure image="images/-0.5_img.png" width="800">}}
+{{</figure>}}
+
+What about if the constant was $i$, the imaginary unit?  If your position was always $e^{it}$, how would you move as that time, $t$, ticks forward?
+
+Well, assuming there’s any way to make sense out of $e^{it}$, and assuming that derivatives still work the way we’d expect when extending to complex numbers, the derivative of your position $e^{it}$ would now always be $i$ times itself. Multiplying by $i$ has the effect of rotating numbers 90-degrees, and as you might expect, things only make sense here if we start thinking beyond the number line and in the complex plane.
+
+{{<figure image="images/complex_equation.png" width="800">}}
+{{</figure>}}
+
+{{<question
+  question="Geometrically, which of the following describes the point $i \cdot (a + bi)$ on the complex plane?"
+  choice1="A 90-degree clockwise rotation of the point $a + bi$ about the origin."
+  choice2="A 90-degree counterclockwise rotation of the point $a + bi$ about the origin."
+  choice3="A reflection of the point $a + bi$ about the real axis."
+  choice4="A reflection of the point $a + bi$ about the imaginary axis."
+  correct=2
+  explanation="Explanation: Multiplying by $i$ has the effect of rotating a given number by 90 degrees. The point $i \cdot (a + bi)$ is equivalent to $i$ multiplied by $a+bi$, resulting in $a+bi$ being rotated 90 degrees counterclockwise about the origin."
+>}}
+
+So even before you know how to compute $e^{it}$, you know that for any position this might give for some value of t, the velocity at that time will be a 90-degree rotation of that position.  
+
+{{<figure image="images/RotatedVectors.png" width="800">}}
+Each blue arrow above pointing outward from the origin represents an example value of $e^{it}$, thought of as a position vector. The corresponding green arrow at its tip shows what the velocity, equal to the position rotated 90 degrees counterclockwise, would have to be for that particular position.
+{{</figure>}}
+
+Drawing this for all possible positions you might come across, we get a vector field, where, usually with vector fields we shrink things down to avoid clutter.
+
+{{<figure image="images/ExpVectorField.png" video="images/vect_anim.mp4" width="900">}}
+{{</figure>}}
+
+At time $t=0$, $e^{it}$ will be 1. There’s only one trajectory starting from that position where your velocity is always matching the vector it’s passing through, a 90-degree rotation of position. It’s when you go around the unit circle at a speed of 1 unit per second. 
+
+{{<figure video="images/rotate_anim.mp4" image="images/complex_img2.png" show="video" width="900">}}
+{{</figure>}}
+
+So after pi seconds, you’ve traced a distance of pi around; $e^{i\pi} = -1$.  
+
+{{<figure image="images/e^ipi.png" width="900">}}
+{{</figure>}}
+
+After $\tau = 2\pi$ seconds, you’ve gone full circle; $e^{i\tau} = 1$. 
+
+{{<figure image="images/e^itau.png" width="900">}}
+{{</figure>}}
+
+And more generally, $e^{it}$ equals a number $t$ radians [[1]](lessons/differential-equations/#footnotes) around this circle.
+
+Nevertheless, something might still feel immoral about putting an imaginary number up in that exponent.  And you’d be right to question that!  For values of $x$ which are not real numbers, what we write as $e^x$ has very little to do with repeated multiplication, and its relation to the number $e$ feels frankly more incidental than definitional. To dig in a little bit deeper, the next lesson covers more general exponents, with a focus on matrices.
+
+## Footnotes
+
+[1] - radian(s), SI unit of angle, 1 radian is equal to an angle at the center of a circle where the arc length of the circular sector is equal to the radius of the circle

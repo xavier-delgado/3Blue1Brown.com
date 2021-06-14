@@ -1,9 +1,9 @@
 from manimlib.imports import *
 
-TexText = TextMobject
 Tex = TexMobject
+TexText = TextMobject
 
-T_COLOR = GREY_B
+T_COLOR = GREY
 VELOCITY_COLOR = GREEN
 POSITION_COLOR = BLUE
 CONST_COLOR = YELLOW
