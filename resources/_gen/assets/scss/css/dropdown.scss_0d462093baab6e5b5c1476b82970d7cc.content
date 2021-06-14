@@ -1,0 +1,1 @@
+.dropdown{text-align:left;background-color:#fff3e6}.dropdown .dropdown_title{margin:10px;font-weight:600}.dropdown .dropdown_content{display:none;margin:10px}.dropdown:hover{cursor:pointer}
