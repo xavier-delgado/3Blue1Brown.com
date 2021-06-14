@@ -1,1 +1,0 @@
-.not_found{display:flex;justify-content:center;align-items:center;text-align:left}.not_found .pi_creature{margin:0}.not_found .not_found_text>*{margin:10px 0}.not_found .not_found_text>*:first-child{font-weight:600}@media(max-width:600px){.not_found{flex-direction:column;text-align:center}}

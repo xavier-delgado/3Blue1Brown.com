@@ -1,1 +1,0 @@
-pre,code,pre *,code *{font-family:cousine,monospace;text-align:left}:not(pre)>code{padding:2px 6px;background:#424242;color:#fff;line-height:1.75}pre{margin:40px 0;padding:20px;background:#424242;overflow-x:auto;overflow-y:auto}pre:first-child{margin-top:0}pre:last-child{margin-bottom:0}
